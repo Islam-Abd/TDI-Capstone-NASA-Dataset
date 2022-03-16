@@ -11,35 +11,42 @@ Reference: A. Saxena, K. Goebel, D. Simon, and N. Eklund, Damage Propagation Mod
 The Data Source is Kaggle https://www.kaggle.com/behrad3d/nasa-cmaps
 
 ## Data Description
-This Data Set consist of four different data set simulated under different combinations of operational conditions and fault modes. Each data set divided into train and test, Train tables include time stamps (cycles) for each engine till failure, Test table include number of cycles for each engine before failure
+This Data Set simulated under different combinations of operational conditions and fault modes. data set divided into train and test, Train tables include time stamps (cycles) for each engine till failure, Test table include number of cycles for each engine before failure
 
 The columns correspond to:
 
 1) unit number
-
 2) time, in cycles
-
 3) operational setting 1
-
 4) operational setting 2
-
 5) operational setting 3
-
 6) sensor measurement 1
-
 7) sensor measurement 2
-
 …
-
 26) sensor measurement 26
 
 ## Project Objective
+![alt text](https://github.com/Islam-Abd/TDI-Capstone-NASA-Dataset/blob/main/images/Picture3.png)
+
 The objective to estimate the remaining useful life (RUL) for each engine in the Test Data Set. Reliably estimating remaining life could have many advantages as:
 
-1) Cost savings (for example by avoiding unscheduled maintenance and by increasing equipment usage)
-
+1) Cost savings 
 2) Operational safety improvements
+3) Schedule Maintainence 
 
-3) Provide decision makers with information that allows them to change operational characteristics (such as load) which in turn may prolong the life of the component.
+## Project Files 
+1) The Jupyter notebook (02_NASA_Turbofan_Jet_Engine_Data_Set.ipynb)
+2) Python file (NASA_Turbofan_Jet_Engine_Data_Set.py)
+3) Dataset Folder 
+4) LICENSE File
 
-4) It also allows planners to account for upcoming maintenance and set in motion a logistics process that supports a smooth transition from faulty equipment to fully functional.
+
+## Study Outcomes 
+The study is able to predict the RUL (Remaining useful life) for the Jet Engine with an error percentage for 3rd quartile for the data less than 10% and the 4th quartile is less than 22% as shown below
+![alt text](https://user-images.githubusercontent.com/90225596/158494758-feace8ff-8aef-4f1f-8760-0b1812c42fd4.png)
+
+Based on the difference between the developed Model and Naive model (Average RUL)
+The model able to operate more safely by predicted that 53 engine could be failed 25 cycles early than expected which is 1325 risky cycles on total 
+and make money saving by predicting that 47 engine could operate 50 more cycles on average which is 2350 more cycles on total 
+
+![alt text](https://user-images.githubusercontent.com/90225596/158494581-dd8e90be-c771-4681-a242-b8451bc3d1ec.png)
